@@ -30,14 +30,14 @@
 @media screen and (max-width: 576px){
     .drift-plot{
       width: 90vh;
-      height: 56vh;
+      height: 80vh;
     }
 }
 
 @media screen and (max-width: 768px){
     .drift-plot{
       width: 90vw;
-      height: 66vw;
+      height: 80vw;
     }
 }
 

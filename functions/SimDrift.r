@@ -39,7 +39,7 @@ SimDrift = function(NGen=100,Freq=0.5,PopSize=250,PopN=10, mode="plot", out=FALS
 		   Утерена=sum(Res_tab[,2]=="Утеряна"))
 	names.arg<-c(paste("Равновесие",as.character(Res[1]),sep="\n"),paste("Фиксирована",as.character(Res[2]),sep="\n"),
 				paste("Утеряна",as.character(Res[3]),sep="\n"))
-    barplot(Res,col=c("lightgrey","darkgreen","tomato"), main="Результаты симуляции генетического дрейфа",
+    barplot(Res,col=c("lightgrey","darkgreen","tomato"), main="Результаты симуляции\nгенетического дрейфа",
 		    ylab="популяций (шт.)",cex.axis=1.1,cex.lab=1.1,font.lab=2,font.axis=2,names.arg=names.arg)
   }
 }
