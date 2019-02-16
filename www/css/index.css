@@ -28,6 +28,10 @@
 }
 
 @media screen and (max-width: 992px){
+  .bott_sp_image{
+    height: auto;
+    width: 65%;
+  }
   .evo_sucks{
     height: auto;
     width: 65%;
@@ -39,6 +43,10 @@
 }
 
 @media screen and (max-width: 768px){
+  .bott_sp_image{
+    height: auto;
+    width: 75%;
+  }
   .evo_sucks{
     height: auto;
     width: 75%;
@@ -50,6 +58,10 @@
 }
 
 @media screen and (max-width: 576px){
+  .bott_sp_image{
+    height: auto;
+    width: 85%;
+  }
   .evo_sucks{
     height: auto;
     width: 85%;
@@ -61,6 +73,10 @@
 }
 
 @media screen and (min-width: 993px){
+  .bott_sp_image{
+    height: auto;
+    width: 50%;
+  }
   .evo_sucks{
     height: auto;
     width: 50%;
@@ -163,3 +179,7 @@ input::-moz-focus-outer {
   border: 0;
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.in-row-title{
+  padding-bottom: 0;
+}

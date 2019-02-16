@@ -40,6 +40,26 @@ server <- function(input, output, session) {
     SimDrift(NGen = NGen1, Freq = Freq1, PopSize = PopSize1, PopN = 300, mode = "hist")
   }
   )
+
+  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # Bottle neck plot output
+  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  output$bot_neck_sqr_plot <- renderPlot({
+    if (input$bot_neck_sqr_button == 0)
+    return()
+    
+    isolate({
+      P_a = input$P_a
+      P_b = input$P_b
+      P_c = input$P_c
+      P_d = input$P_d
+
+      PopSize = input$PopSize
+      BotSize = input$BotSize
+    })
+    SimDrift(PopSize = PopSize, BotSize = BotSize, P_a = P_a, P_b = P_b, P_c = P_c, P_d = P_d)
+  }
+  )
 }
 
 
