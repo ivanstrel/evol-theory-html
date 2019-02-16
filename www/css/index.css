@@ -27,35 +27,51 @@
   overflow-y: auto;
 }
 
-@media screen and (max-width: 576px){
-    .drift-plot{
-      width: 90vh;
-      height: 80vh;
-    }
+@media screen and (max-width: 992px){
+  .evo_sucks{
+    height: auto;
+    width: 65%;
+  }
+  .drift-plot{
+    height: 75vh;
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 768px){
-    .drift-plot{
-      width: 90vw;
-      height: 80vw;
-    }
+  .evo_sucks{
+    height: auto;
+    width: 75%;
+  }
+  .drift-plot{
+    height: 80vw;
+    width: 90vw;
+  }
 }
 
-@media screen and (max-width: 992px){
-    .drift-plot{
-      width: auto;
-      height: 75vh;
-    }
+@media screen and (max-width: 576px){
+  .evo_sucks{
+    height: auto;
+    width: 85%;
+  }
+  .drift-plot{
+    height: 80vh;
+    width: 90vh;
+  }
 }
 
 @media screen and (min-width: 993px){
-    .drift-plot{
-      width: auto;
-      height: 60vh;
-    }
+  .evo_sucks{
+    height: auto;
+    width: 50%;
+  }
+  .drift-plot{
+    height: 60vh;
+    width: auto;
+  }
 }
 
-
+/* ~~~~~~~~~~~~~~~~ Range finder ~~~~~~~~~~~~~~~~ */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -146,3 +162,4 @@ input::-moz-focus-inner,
 input::-moz-focus-outer {
   border: 0;
 }
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
