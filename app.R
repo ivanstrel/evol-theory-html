@@ -47,17 +47,35 @@ server <- function(input, output, session) {
   output$bot_neck_sqr_plot <- renderPlot({
     if (input$bot_neck_sqr_button == 0)
     return()
-    
-    isolate({
-      P_a = input$P_a
-      P_b = input$P_b
-      P_c = input$P_c
-      P_d = input$P_d
 
-      PopSize = input$PopSize
-      BotSize = input$BotSize
+    isolate({
+      p_a <- input$P_a
+      p_b <- input$P_b
+      p_c <- input$P_c
+      p_d <- input$P_d
+
+      pop_size <- input$PopSize2
+      bot_size <- input$BotSize
     })
-    BotNeckSqr(PopSize = PopSize, BotSize = BotSize, P_a = P_a, P_b = P_b, P_c = P_c, P_d = P_d)
+    bot_neck_sqr_tab <<- BotNeckSqr(pop_size = pop_size, bot_size = bot_size,
+                                    p_a = p_a, p_b = p_b, p_c = p_c, p_d = p_d)
+  }
+  )
+
+  output$bot_neck_sqr_tab <- renderTable({
+    if (input$bot_neck_sqr_button == 0)
+    return()
+
+    isolate({
+      p_a <- input$P_a
+      p_b <- input$P_b
+      p_c <- input$P_c
+      p_d <- input$P_d
+
+      pop_size <- input$PopSize2
+      bot_size <- input$BotSize
+    })
+    bot_neck_sqr_tab
   }
   )
 }
