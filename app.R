@@ -57,7 +57,7 @@ server <- function(input, output, session) {
       PopSize = input$PopSize
       BotSize = input$BotSize
     })
-    SimDrift(PopSize = PopSize, BotSize = BotSize, P_a = P_a, P_b = P_b, P_c = P_c, P_d = P_d)
+    BotNeckSqr(PopSize = PopSize, BotSize = BotSize, P_a = P_a, P_b = P_b, P_c = P_c, P_d = P_d)
   }
   )
 }
