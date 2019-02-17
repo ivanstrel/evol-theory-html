@@ -42,7 +42,7 @@ server <- function(input, output, session) {
   )
 
   #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  # Bottle neck plot output
+  # Bottle neck plot output 1
   #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   output$bot_neck_sqr_plot <- renderPlot({
     if (input$bot_neck_sqr_button == 0)
@@ -76,6 +76,23 @@ server <- function(input, output, session) {
       bot_size <- input$BotSize
     })
     bot_neck_sqr_tab
+  }
+  )
+
+  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # Bottle neck plot output 2
+  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  output$bot_neck_sim_plot <- renderPlot({
+    if (input$bot_neck_sim_button == 0)
+    return()
+
+    isolate({
+      freq <- input$Freq2
+      pop_size <- input$PopSize3
+      bot_size <- input$BotSize1
+    })
+    BotNeckSim(pop_size = pop_size, bot_size = bot_size,
+               f_a = freq, f_b = freq, f_c = freq, f_d = freq, f_e = freq)
   }
   )
 }

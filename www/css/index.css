@@ -36,13 +36,17 @@
     height: auto;
     width: 65%;
   }
-  .drift-plot{
+  .out-plot-generic{
     height: 75vh;
     width: auto;
   }
   .bot-neck-sqr-plot{
     height: 75vh;
     width: auto;
+  }
+  .out-plot-square{
+    height: 75vh;
+    width: 75vw;
   }
 }
 
@@ -55,13 +59,17 @@
     height: auto;
     width: 75%;
   }
-  .drift-plot{
+  .out-plot-generic{
     height: 80vh;
     width: 90vw;
   }
   .bot-neck-sqr-plot{
     height: 70vh;
     width: auto;
+  }
+  .out-plot-square{
+    height: 80vh;
+    width: 80vw;
   }
 }
 
@@ -74,13 +82,17 @@
     height: auto;
     width: 85%;
   }
-  .drift-plot{
+  .out-plot-generic{
     height: 480px;
     width: 680px;
   }
   .bot-neck-sqr-plot{
     height: 480px;
     width: 680px;
+  }
+  .out-plot-square{
+    height: 540px;
+    width: 540px;
   }
 }
 
@@ -93,12 +105,16 @@
     height: auto;
     width: 50%;
   }
-  .drift-plot{
+  .out-plot-generic{
     height: 60vh;
     width: auto;
   }
   .bot-neck-sqr-plot{
     height: 60vh;
+    width: auto;
+  }
+  .out-plot-square{
+    height: 70vh;
     width: auto;
   }
 }
