@@ -95,6 +95,26 @@ server <- function(input, output, session) {
                f_a = freq, f_b = freq, f_c = freq, f_d = freq, f_e = freq)
   }
   )
+
+  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # Natural selection plot output 1
+  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  output$nat_select_plot <- renderPlot({
+    if (input$nat_select_plot_button == 0)
+    return()
+
+    isolate({
+      n_gen <- input$NGen2
+      pa <- input$PA
+      pop_size <- input$PopSize4
+      pop_n <- input$PopN1
+      fAA <- input$fAA
+      fAa <- input$fAa
+      faa <- input$faa
+    })
+    nat_select(n_gen = n_gen, pa = pa, pop_size = pop_size, pop_n = pop_n, fAA = fAA, fAa = fAa, faa = faa)
+  }
+  )
 }
 
 
