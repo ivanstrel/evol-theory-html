@@ -219,3 +219,13 @@ input::-moz-focus-outer {
 .bot-neck-sqr-tab{
   overflow-x: auto;
 }
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center; 
+  vertical-align: middle;
+}

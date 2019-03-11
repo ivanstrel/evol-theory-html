@@ -115,6 +115,39 @@ server <- function(input, output, session) {
     nat_select(n_gen = n_gen, pa = pa, pop_size = pop_size, pop_n = pop_n, fAA = fAA, fAa = fAa, faa = faa)
   }
   )
+
+  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  #  Plot 4.1: Hardy Wainberg common case
+  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  output$hw_common_plot <- renderPlot({
+    if (input$hw_common_plot_button == 0)
+    return()
+
+    isolate({
+      pop_size <- input$pop_size_5
+    })
+    hw_common_case(pop_size = pop_size)
+  }
+  )
+
+  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # Plot 4.2: Hardy Wainberg natural selection
+  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  output$hw_nat_select_plot <- renderPlot({
+    if (input$hw_nat_select_plot_button == 0)
+    return()
+
+    isolate({
+      n_gen <- input$n_gen_2
+      fp <- input$pa_1
+      pop_size <- input$pop_size_6
+      fAA <- input$fAA_1
+      fAa <- input$fAa_1
+      faa <- input$faa_1
+    })
+    hw_nat_select(n_gen = n_gen, fp = fp, pop_size = pop_size, fAA = fAA, fAa = fAa, faa = faa)
+  }
+  )
 }
 
 
