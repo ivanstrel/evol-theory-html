@@ -148,6 +148,29 @@ server <- function(input, output, session) {
     hw_nat_select(n_gen = n_gen, fp = fp, pop_size = pop_size, fAA = fAA, fAa = fAa, faa = faa)
   }
   )
+
+
+  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # Plot 5.1: Hardy Wainberg inbreeding
+  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  output$hw_inbrieeding_plot <- renderPlot({
+    if (input$hw_inbrieeding_plot_button == 0)
+    return()
+
+    isolate({
+      self_poll_ratio <- input$self_poll_ratio
+    })
+    hw_inbrieeding_tab <<- hw_inbrieeding(self_poll_ratio = self_poll_ratio)
+  }
+  )
+
+  output$hw_inbrieeding_tab <- renderTable({
+    if (input$hw_inbrieeding_plot_button == 0)
+    return()
+    hw_inbrieeding_tab
+  },
+  rownames = TRUE
+  )
 }
 
 

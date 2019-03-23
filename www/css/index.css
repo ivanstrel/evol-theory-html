@@ -229,3 +229,10 @@ th, td {
   text-align: center; 
   vertical-align: middle;
 }
+
+.box {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
