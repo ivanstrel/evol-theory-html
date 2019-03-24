@@ -171,6 +171,29 @@ server <- function(input, output, session) {
   },
   rownames = TRUE
   )
+
+  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # Plot 6.1: Hardy Wainberg inbreeding
+  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  output$hw_isolate_plot <- renderPlot({
+    if (input$hw_isolate_plot_button == 0)
+    return()
+
+    isolate({
+      fp <- input$fp_t6
+      isolate <- input$brink
+    })
+    hw_isolate_tab <<- hw_isolateion(fp = fp, isolate = isolate)
+  }
+  )
+
+  output$hw_isolate_tab <- renderTable({
+    if (input$hw_isolate_plot_button == 0)
+    return()
+    hw_isolate_tab
+  },
+  rownames = TRUE
+  )
 }
 
 
